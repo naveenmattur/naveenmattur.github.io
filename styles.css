@@ -1,0 +1,103 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.resume {
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+header {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.profile-photo img {
+    width:150px;
+    height:160px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(226, 112, 112, 0.2);
+    animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animated-title {
+    color: #0073e6;
+    font-size: 24px;
+    margin-top: 10px;
+    animation: colorChange 3s ease-in-out infinite;
+}
+
+@keyframes colorChange {
+    0%, 100% { color: #0a62ba; }
+    50% { color: #ff6600; }
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 18px;
+    border-bottom: 1px solid #0073e6;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.animated-section:nth-child(2) { animation-delay: 0.2s; }
+.animated-section:nth-child(3) { animation-delay: 0.4s; }
+.animated-section:nth-child(4) { animation-delay: 0.6s; }
+.animated-section:nth-child(5) { animation-delay: 0.8s; }
+.animated-section:nth-child(6) { animation-delay: 1s; }
+.animated-section:nth-child(7) { animation-delay: 1.2s; }
+.animated-section:nth-child(8) { animation-delay: 1.4s; }
+.animated-section:nth-child(9) { animation-delay: 1.6s; }
